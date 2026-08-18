@@ -36,6 +36,16 @@ py step2_llm_screen.py `
   --model deepseek-v4-pro `
   --input C:\Users\sxx\Desktop\codex\barchmark-m-7.30\Target_M\data\24_25_3000
 ```
+大模型进一步提问四个问题：
+
+这篇论文是否属于细胞生物学研究？
+
+这篇论文是否为原始研究，而不是综述或背景性文章？
+
+这篇论文是否提出了明确且可识别的研究问题？
+
+这篇论文是否提供了能够回答该研究问题的实验数据和证据？
+
 
 ## Step3：直接扫描3000篇CSV，找到指定数量
 
