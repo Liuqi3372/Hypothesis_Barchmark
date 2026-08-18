@@ -4,8 +4,8 @@ from pathlib import Path
 
 
 def load_oa_step1():
-    path = Path(__file__).resolve().parents[1] / "OA-step1_collect_pmc.py"
-    spec = importlib.util.spec_from_file_location("oa_step1", path)
+    path = Path(__file__).resolve().parents[1] / "step1_collect_pmc.py"
+    spec = importlib.util.spec_from_file_location("step1_collect_pmc_oa", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module

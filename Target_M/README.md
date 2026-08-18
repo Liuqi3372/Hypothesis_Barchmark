@@ -15,7 +15,9 @@ Target_M/
     └── step3/
 ```
 
-## Step1
+## Step1：OA 审计候选池
+
+`step1_collect_pmc.py` 是 Step1 的唯一入口。它先执行论文类型、全文完整性、主题和年份均衡筛选，再审计每篇候选论文引言中的去重参考文献。默认要求引言参考文献 OA 覆盖率 ≥90%、PMC 覆盖率 ≥70%、引用解析率 ≥95%。
 
 ```powershell
 py step1_collect_pmc.py `
@@ -24,7 +26,7 @@ py step1_collect_pmc.py `
   --output C:\Users\sxx\Desktop\codex\barchmark-m-7.30\Target_M\data\24_25_3000
 ```
 
-3000 篇候选保存在 `step1/eligible.csv`。
+3000 篇通过基础规则和 OA 引用审计的候选论文保存在 `step1/eligible.csv`；完整的逐引用 OA 审计保存在 `intro_reference_oa_audit` 字段，缓存保存在 `step1/oa_reference_cache.json`。
 
 ## Step2
 

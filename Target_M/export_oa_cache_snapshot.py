@@ -10,8 +10,8 @@ from pmc_m.pmc import PMCClient
 
 
 def load_oa_module(project: Path):
-    path = project / "OA-step1_collect_pmc.py"
-    spec = importlib.util.spec_from_file_location("oa_step1", path)
+    path = project / "step1_collect_pmc.py"
+    spec = importlib.util.spec_from_file_location("step1_collect_pmc", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
