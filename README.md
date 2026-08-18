@@ -226,7 +226,7 @@ Ground Truth 的核心内容包括最小已知事实、知识空白、真实假�
 Hypothesis_Barchmark/
 ├── Target_M/          # 步骤一：目标论文筛选与证据可行性检查
 ├── Minimum_set/       # 步骤二：最小事实、逻辑链和最小参考文献
-├── LLM_Reasoning/     # 步骤三：证据分析、跨文献推理和假设生成
+├── LLM_Reasoning/     # 步骤三：证据分析、跨文献推理和假设生成（含独立运行说明）
 ├── figures/readme/    # README 使用的三张流程图
 └── README.md
 ```
@@ -234,3 +234,5 @@ Hypothesis_Barchmark/
 ## 总结
 
 本项目先找到一篇科学问题明确且历史证据完整的目标论文，再用消融与集合覆盖方法还原提出该假设所需的最小证据，最后隐藏真实答案，测试大模型能否沿着“实验与文本证据 → 局部结论 → 跨论文桥接 → 知识空白 → 可证伪假设”的路径独立完成科学推理。
+
+LLM 推理阶段的完整命令、输入输出和代码说明见 [`LLM_Reasoning/README.md`](LLM_Reasoning/README.md)。
